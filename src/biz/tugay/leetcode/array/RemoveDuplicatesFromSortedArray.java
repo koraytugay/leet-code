@@ -1,7 +1,6 @@
-package biz.tugay.leetcode;
+package biz.tugay.leetcode.array;
 
-// Remove Duplicates from Sorted Array
-// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array
 public class RemoveDuplicatesFromSortedArray {
 
   public int removeDuplicates(int[] nums) {
@@ -12,7 +11,7 @@ public class RemoveDuplicatesFromSortedArray {
         i++;
       }
     }
-    int length =  i + 1;
+    int length = i + 1;
     return length;
   }
 }
