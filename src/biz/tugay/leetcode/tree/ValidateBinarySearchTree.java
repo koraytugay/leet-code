@@ -1,5 +1,8 @@
 package biz.tugay.leetcode.tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // https://leetcode.com/problems/validate-binary-search-tree
 public class ValidateBinarySearchTree {
 
@@ -30,4 +33,27 @@ public class ValidateBinarySearchTree {
 
     return isValidHelper(node.left, min, node) && isValidHelper(node.right, node, max);
   }
+
+//  Alternative solution
+//  public boolean isValidBST(TreeNode root) {
+//    List<TreeNode> treeNodes = inOrderTraverse(root);
+//    for (int i = 0; i < treeNodes.size() - 1; i++) {
+//      if (treeNodes.get(i).val >= treeNodes.get(i + 1).val) {
+//        return false;
+//      }
+//    }
+//    return true;
+//  }
+//
+//  public List<TreeNode> inOrderTraverse(TreeNode node) {
+//    if (node == null) {
+//      return new ArrayList<>();
+//    }
+//
+//    List<TreeNode> inOrder = new ArrayList<>(inOrderTraverse(node.left));
+//    inOrder.add(node);
+//    inOrder.addAll(inOrderTraverse(node.right));
+//
+//    return inOrder;
+//  }
 }
