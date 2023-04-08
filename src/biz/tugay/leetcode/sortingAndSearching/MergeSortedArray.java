@@ -7,10 +7,7 @@ public class MergeSortedArray {
     int k = (m + n) - 1;
     m = m - 1;
     n = n - 1;
-    for (int idx = k; idx >= 0; idx--) {
-      if (n == -1) {
-        break;
-      }
+    while (n != -1) {
       if (m != -1) {
         if (nums1[m] > nums2[n]) {
           nums1[k] = nums1[m];
